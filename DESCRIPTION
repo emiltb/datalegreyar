@@ -10,6 +10,7 @@ LazyData: true
 ByteCompile: true
 Imports: 
     stringr,
-    magrittr
+    magrittr,
+    dplyr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1
