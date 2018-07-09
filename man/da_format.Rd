@@ -7,11 +7,13 @@
 da_format(.tbl, x, y, text, xlab = FALSE, ylab = FALSE)
 }
 \arguments{
-\item{.tbl}{Dataframe containing data to display}
+\item{.tbl}{Dataframe containing data to display.}
 
-\item{x}{Name of x column of data}
+\item{x}{Name of x column of data.}
 
-\item{y}{Name of y column of data}
+\item{y}{Name of y column of data.}
+
+\item{text}{String that the data is mapped onto.}
 
 \item{xlab}{Boolean. Whether to display x axis. Default to FALSE.}
 

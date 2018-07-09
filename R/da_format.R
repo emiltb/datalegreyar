@@ -1,9 +1,10 @@
 #' Format string to display data provided with the datalegreya font
 #'
 #'
-#' @param .tbl Dataframe containing data to display
-#' @param x Name of x column of data
-#' @param y Name of y column of data
+#' @param .tbl Dataframe containing data to display.
+#' @param x Name of x column of data.
+#' @param y Name of y column of data.
+#' @param text String that the data is mapped onto.
 #' @param xlab Boolean. Whether to display x axis. Default to FALSE.
 #' @param ylab Boolean. Whether to display y axis. Default to FALSE.
 #'
