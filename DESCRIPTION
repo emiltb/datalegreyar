@@ -1,0 +1,12 @@
+Package: datalegreyar
+Version: 0.0.0.9000
+Title: Format data for beautiful display with the Datalegreya font
+Description: datalegreyar converts datasets to strings of text ready to be printed with the Datalegreya font. 
+    This is suitable for very simple and very compact displays of data
+Authors@R: person("Emil", "Tveden Bjerglund", , "emil@tbjerglund.dk", c("aut", "cre"))
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+Imports: 
+    stringr
