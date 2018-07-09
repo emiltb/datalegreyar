@@ -12,38 +12,35 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+
 # datalegreyar
 
-The goal of datalegreyar is to ...
+The datalegreyar package aims to make formatting of data for use with the [Datalegreya font](http://figs-lab.com/datalegreya) very easy. The font can be downloaded from [Github](https://github.com/figs-lab/datalegreya)
 
 ## Installation
 
-You can install the released version of datalegreyar from [CRAN](https://CRAN.R-project.org) with:
+`datalegreyar` is not on CRAN yet. It can be installed from this Github repo.
 
 ``` r
-install.packages("datalegreyar")
+devtools::install_github("emiltb/datalegreyar")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Currently the package only export one function: `da_format`. It takes a dataframe with specification of two columns, and a text string and outputs the string that plots the data with the `datalegreya` font. The data is automatically rescaled and rounded to fit the formatting requirements for the font.
 
 ```{r example}
-## basic example code
+library(datalegreyar)
+data <- data.frame(year = seq(2008, 2018, 1), val = 2 * sin(seq(0, pi, length.out = 11)))
+text <- "datalegreya"
+result <- da_format(data, year, val, text, xlab = TRUE, ylab = TRUE)
+
+result
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+When this string is written with the Detalegreya font, it looks like below. There are three variants of the font (gradient, thin, dot) all illustrated here.
 
-```{r cars}
-summary(cars)
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("man/figures/README-datalegreya.png")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
